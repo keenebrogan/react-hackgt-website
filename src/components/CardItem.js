@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 function CardItem() {
     return (
         <div>
-            <li className="cards_item"></li>
-                <Link className="cards__item__link">
-                    <figure className="cards__item__pic-wrap">
+            <li className="cards__item"></li>
+                <Link className="cards__item__link" to = {props.path}>
+                    <figure className="cards__item__pic-wrap" data-category={props.label}>
                         <img src = "/" alt = "Travel Image"
                         className = "cards__item__img"/>
 
 
                     </figure>
                     <div className = "cards__item"info>
-                        <h5 className='cards__item__text' />
+                        <h5 className='cards__item__text'>(props.text)</h5>
                     </div>
                 </Link>
             
